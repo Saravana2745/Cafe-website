@@ -220,7 +220,6 @@ body {
 .parallax-gallery {
   width: 97vw;
   min-height: 320px;
-  background: url('/g.avif') center center/cover no-repeat;
   display: flex;
   flex-direction: column;
   align-items: center;
