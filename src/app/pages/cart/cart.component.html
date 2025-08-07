@@ -1,0 +1,79 @@
+<div class="cart-container">
+  <!-- Show empty cart message if no items -->
+  <div *ngIf="cartService.getItems().length === 0" class="empty-cart-message">
+    <h2>Your cart is empty</h2>
+    <p>Add some delicious items to your cart to place an order!</p>
+  </div>
+
+  <!-- Show checkout form if triggered -->
+  <div *ngIf="showCheckoutForm" class="checkout-form">
+    <h3>Enter your details</h3>
+    <label>
+      Name:
+      <input
+        type="text"
+        [(ngModel)]="userName"
+        required
+        autocomplete="name"
+      >
+    </label>
+    <label>
+      Address:
+      <textarea
+        [(ngModel)]="address"
+        required
+        autocomplete="street-address"
+      ></textarea>
+    </label>
+    <label>
+      Phone:
+      <input
+        type="tel"
+        [(ngModel)]="phone"
+        required
+        pattern="^[0-9]{10}$"
+        maxlength="10"
+        minlength="10"
+        title="Please enter a 10-digit phone number."
+        (input)="sanitizePhone()"
+        autocomplete="tel"
+      />
+      <div *ngIf="phone && phone.length !== 10" style="color: red; font-size: 0.9em;">
+        Please enter a valid 10-digit phone number.
+      </div>
+    </label>
+    <button
+  class="food-order-btn"
+  (click)="confirmCheckout()"
+  [disabled]="!userName || !address || phone.length !== 10"
+  [ngClass]="{'move-away': phone && phone.length !== 10 && confirmBtnHovered}"
+  (mouseenter)="confirmBtnHovered = true"
+  (mouseleave)="confirmBtnHovered = false"
+>
+  Confirm Order
+</button>
+    <button class="food-order-btn cancel" (click)="cancelCheckout()">Cancel</button>
+  </div>
+
+  <!-- Show cart items if not checking out -->
+  <div *ngIf="!showCheckoutForm && cartService.getItems().length > 0">
+    <h2>Your Order</h2>
+    <ul>
+      <li *ngFor="let item of cartService.getItems()">
+        <img [src]="item.image" alt="{{ item.name }}" class="cart-img">
+        <span class="cart-item-name">{{ item.name }}</span>
+        <button class="qty-btn" (click)="cartService.decreaseQuantity(item)">−</button>
+        <span class="cart-item-qty">{{ item.quantity }}</span>
+        <button class="qty-btn" (click)="cartService.increaseQuantity(item)">+</button>
+        <span class="cart-item-amount">₹{{ (item.price * item.quantity).toFixed(2) }}</span>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Show checkout button and summary if not checking out -->
+  <div *ngIf="!showCheckoutForm && cartService.getItems().length > 0" class="cart-summary">
+    <div>Subtotal: ₹{{ subtotal.toFixed(2) }}</div>
+    <div>Tax (5%): ₹{{ tax.toFixed(2) }}</div>
+    <div><strong>Total: ₹{{ total.toFixed(2) }}</strong></div>
+    <button class="food-order-btn" (click)="checkout()">Checkout</button>
+    <button class="food-order-btn cancel" (click)="removeAll()">Remove All</button>

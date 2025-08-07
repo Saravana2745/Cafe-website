@@ -1,0 +1,53 @@
+<body>
+<div class="about-hero" style="margin-top: 90px;">
+  <h2>About us</h2>
+</div>
+<div class="logo-img-wrapper" [class.animated]="logoAnimated">
+  <img src="logo.png" alt="Cafe Logo" class="logo-img" />
+</div>
+<div class="about-description" [class.in-view]="aboutDescInView">
+  <p>
+    Brew a fresh pot of Coffee, grill some Sandwiches, drain the Pasta &amp; toss it in the sauce. Aromas of all these will make you drool. Since the sense of smell is so closely tied to the sense of taste, we at Cafe Aroma ensure that you experience the best of everything related to the aromas of food &amp; beverages served around.
+  </p>
+  <p>
+    Aromas, a leading Indian coffee chain was established in 2007 with the idea to allow people to meet family and friends, to enjoy a business meeting or just relax in the ambience of the unique style of Indian Coffee houses assimilated through Aromas stores.
+  </p>
+</div>
+<!-- Slideshow Section -->
+<div class="about-slideshow">
+  <div class="slide" *ngFor="let img of slideshowImages; let i = index" [class.active]="i === currentSlide">
+    <img [src]="img" alt="Cafe Slide {{i+1}}">
+  </div>
+  <button class="slide-btn prev" (click)="prevSlide()">&#10094;</button>
+  <button class="slide-btn next" (click)="nextSlide()">&#10095;</button>
+</div>
+<div class="image-gallery parallax-gallery">
+  <h1>Look Out for Our Special Festivals</h1>
+  <p class="slide-in">Fresh From the Cafe</p>
+</div>
+<div class="cafe-gallery" [class.in-view]="galleryInView">
+  <div class="gallery-grid">
+    <div class="gallery-item" *ngFor="let img of galleryImages">
+      <img [src]="img" alt="Cafe Gallery Image" />
+    </div>
+  </div>
+</div>
+<div class="customer-feedback-section" [class.in-view]="customerFeedbackInView">
+  <h2>What Our Customers Say</h2>
+  <div class="feedback-list">
+    <div class="feedback-card" *ngFor="let feedback of feedbacks; let i = index">
+      <div class="feedback-avatar">
+        <img [src]="feedback.avatar" alt="Customer Avatar">
+      </div>
+      <div class="feedback-content">
+        <p class="feedback-text">"{{ feedback.text }}"</p>
+        <p class="feedback-name">- {{ feedback.name }}</p>
+      </div>
+    </div>
+  </div>
+<div class="lets-eat-section">
+  <h2>Let's Eat!</h2>
+  <a class="order-btn" (click)="goToOrder()">Order Now</a>
+</div>
+</div>
+</body>

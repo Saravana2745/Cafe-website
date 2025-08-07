@@ -1,0 +1,230 @@
+.contact-container.cafe-contact {
+  max-width: 950px;
+  margin: 2.5rem auto 2rem auto;
+  margin-top: 90px;
+  background: #fffbe6;
+  border-radius: 22px;
+  box-shadow: 0 2px 16px rgba(107, 79, 39, 0.10);
+  padding: 2.5rem 2rem;
+}
+
+.cafe-contact-row {
+  display: flex;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.cafe-contact-details {
+  flex: 1 1 340px;
+  min-width: 270px;
+  max-width: 420px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 1px 8px rgba(107, 79, 39, 0.07);
+  padding: 1.5rem 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.cafe-contact-about-section {
+  background: linear-gradient(120deg, #fffbe6 80%, #ffe4b5 100%);
+}
+
+.cafe-contact-form-section {
+  background: linear-gradient(120deg, #fffbe6 80%, #ffecd2 100%);
+}
+
+.contact-title {
+  color: #6b4f27;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  letter-spacing: 1px;
+}
+
+.cafe-contact-about p {
+  color: #4b2e05;
+  font-size: 1.08rem;
+  margin-bottom: 1rem;
+}
+
+.cafe-contact-highlights {
+  list-style: disc inside;
+  color: #ff9100;
+  margin-bottom: 1.2rem;
+  padding-left: 1.2em;
+}
+
+.cafe-contact-info p {
+  margin: 0.3em 0;
+  color: #6b4f27;
+  font-size: 1.02rem;
+}
+
+.footer-icon {
+  color: #ff9100;
+  margin-right: 0.4em;
+  font-size: 1.1em;
+  vertical-align: middle;
+}
+
+.cafe-contact-map {
+  margin-top: 1.2rem;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 1px 8px rgba(107, 79, 39, 0.08);
+}
+
+.cafe-contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+
+.cafe-form-title {
+  color: #ff9100;
+  font-size: 1.2rem;
+  margin-bottom: 0.7rem;
+  letter-spacing: 1px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-input,
+.contact-textarea {
+  border: 1px solid #c19a6b;
+  border-radius: 7px;
+  padding: 0.7rem;
+  font-size: 1rem;
+  background: #fffbe6;
+  color: #4b2e05;
+  transition: border 0.2s;
+}
+
+.contact-input:focus,
+.contact-textarea:focus {
+  border: 1.5px solid #ffb347;
+  outline: none;
+}
+
+.contact-btn {
+  background: #ffb347;
+  color: #4b2e05;
+  border: none;
+  border-radius: 30px;
+  padding: 0.7rem 1.5rem;
+  font-size: 1.05rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+  margin-top: 0.5rem;
+}
+
+.contact-btn:disabled {
+  background: #ffe4b5;
+  color: #bdbdbd;
+  cursor: not-allowed;
+}
+
+.contact-btn:hover:not(:disabled) {
+  background: #ff9800;
+  color: #fff;
+}
+
+@media (max-width: 900px) {
+  .cafe-contact-row {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .cafe-contact-details {
+    max-width: 100%;
+    min-width: 0;
+    padding: 1.2rem 0.7rem;
+  }
+  .contact-container.cafe-contact {
+    padding: 1.2rem 0.5rem;
+  }
+}
+/* ...existing styles... */
+
+body {
+  background: linear-gradient(135deg, #f3e9dd 0%, #ffe4b5 100%);
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  overflow-x: hidden;
+}
+/* Coffee cup cursor for the whole page */
+body, .contact-btn {
+  cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" height="32" width="32"><text y="26" font-size="28">🥢</text></svg>') 0 28, auto;
+}
+
+/* Cake icon cursor when button is active (clicked) */
+.contact-btn:active {
+  cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" height="32" width="32"><text y="26" font-size="28">🍰</text></svg>') 0 28, auto;
+}
+/* ...existing code... */
+
+/* Animate the contact form container with a fade-in and slight slide up */
+.cafe-contact-form-section {
+  background: linear-gradient(120deg, #fffbe6 80%, #ffecd2 100%);
+  animation: contactFormFadeIn 1.1s cubic-bezier(.23,1.02,.47,.98) 0.2s both;
+}
+
+@keyframes contactFormFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(40px) scale(0.97);
+  }
+  80% {
+    opacity: 1;
+    transform: translateY(-6px) scale(1.03);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Animate the Send Message button with a gentle pop on hover */
+.contact-btn:hover:not(:disabled) {
+  background: #ff9800;
+  color: #fff;
+  animation: btnPop 0.4s cubic-bezier(.23,1.02,.47,.98);
+}
+
+@keyframes btnPop {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 2px 8px rgba(255, 152, 0, 0.10);
+  }
+  60% {
+    transform: scale(1.08);
+    box-shadow: 0 6px 18px rgba(255, 152, 0, 0.18);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 2px 8px rgba(255, 152, 0, 0.10);
+  }
+}
+
+/* Animate input focus with a glow */
+.contact-input:focus,
+.contact-textarea:focus {
+  border: 1.5px solid #ffb347;
+  outline: none;
+  box-shadow: 0 0 8px #ffb34733;
+  animation: inputGlow 0.6s;
+}
+
+@keyframes inputGlow {
+  0% {
+    box-shadow: 0 0 0 #ffb34700;
+  }
+  100% {
+    box-shadow: 0 0 8px #ffb34733;
+  }
+}

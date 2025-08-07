@@ -1,0 +1,247 @@
+.cart-container {
+  max-width: 600px;
+  margin-top: 100px; /* Extra space for navbar */
+  background: #fffbe6;
+  border-radius: 18px;
+  box-shadow: 0 2px 12px rgba(107, 79, 39, 0.10);
+  padding: 2rem 1.5rem;
+}
+
+h2 {
+  color: #6b4f27;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  padding: 1rem 0;
+  border-bottom: 1px solid #ffe4b5;
+  font-size: 1.1rem;
+}
+
+li:last-child {
+  border-bottom: none;
+}
+
+img {
+  margin-right: 16px;
+  border-radius: 8px;
+  box-shadow: 0 1px 6px rgba(107, 79, 39, 0.10);
+}
+
+strong {
+  flex: 1;
+  color: #4b2e05;
+}
+
+.cart-empty {
+  text-align: center;
+  color: #bdbdbd;
+  font-size: 1.1rem;
+  margin: 2rem 0;
+}
+
+.qty-btn {
+  background: #ffb347;
+  border: none;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #4b2e05;
+  margin: 0 2px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.qty-btn:hover {
+  background: #ff9800;
+  color: #fff;
+}
+
+.cart-summary {
+  margin-top: 2rem;
+  font-size: 1.1rem;
+  background: #fff8e1;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 1px 6px rgba(107, 79, 39, 0.08);
+}
+
+.food-order-btn {
+  margin-top: 1rem;
+  background: #ffb347;
+  color: #4b2e05;
+  border: none;
+  border-radius: 30px;
+  padding: 0.6rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.food-order-btn.cancel {
+  background: #eee;
+  color: #4b2e05;
+  margin-left: 1rem;
+}
+
+.food-order-btn:hover {
+  background: #ff9800;
+  color: #fff;
+}
+
+.checkout-form {
+  margin-top: 100px; /* Extra space for navbar */
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(107, 79, 39, 0.10);
+  padding: 2rem 1.5rem;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.checkout-form label {
+  display: block;
+  margin-bottom: 1rem;
+  font-weight: 500;
+  color: #4b2e05;
+}
+
+.checkout-form input,
+.checkout-form textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 6px;
+  border: 1px solid #c19a6b;
+  margin-top: 0.3rem;
+  font-size: 1rem;
+  background: #fffbe6;
+}
+.cart-container {
+  max-width: 600px;
+  margin: 100px auto 2rem auto; /* Top margin to avoid navbar overlap */
+  background: #fffbe6;
+  border-radius: 18px;
+  box-shadow: 0 2px 12px rgba(107, 79, 39, 0.10);
+  padding: 2rem 1.5rem;
+}
+.cart-container {
+  max-width: 600px;
+  margin: 100px auto 2rem auto;
+  background: #fffbe6;
+  border-radius: 18px;
+  box-shadow: 0 2px 12px rgba(107, 79, 39, 0.10);
+  padding: 2rem 1.5rem;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  padding: 1rem 0;
+  border-bottom: 1px solid #ffe4b5;
+  font-size: 1.1rem;
+}
+
+li:last-child {
+  border-bottom: none;
+}
+
+.cart-img {
+  width: 48px;
+  height: 48px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-right: 14px;
+  box-shadow: 0 1px 6px rgba(107, 79, 39, 0.10);
+}
+
+.cart-item-name {
+  flex: 1;
+  color: #4b2e05;
+  font-weight: 500;
+}
+
+.cart-item-qty {
+  margin: 0 12px;
+  color: #6b4f27;
+}
+
+.cart-item-amount {
+  min-width: 80px;
+  text-align: right;
+  color: #4b2e05;
+  font-weight: bold;
+}
+
+.cart-summary {
+  margin-top: 2rem;
+  font-size: 1.1rem;
+  background: #fff8e1;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 1px 6px rgba(107, 79, 39, 0.08);
+}
+
+.food-order-btn {
+  margin-top: 1rem;
+  background: #ffb347;
+  color: #4b2e05;
+  border: none;
+  border-radius: 30px;
+  padding: 0.6rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.food-order-btn.cancel {
+  background: #eee;
+  color: #4b2e05;
+  margin-left: 1rem;
+}
+
+.food-order-btn:hover {
+  background: #ff9800;
+  color: #fff;
+}
+.qty-btn {
+  background: #ffb347;
+  border: none;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #4b2e05;
+  margin: 0 6px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.qty-btn:hover {
+  background: #ff9800;
+  color: #fff;
+}
+.empty-cart-message {
+  text-align: center;
+  color: #bfa16a;
+  margin: 3rem 0 2rem 0;
+  font-size: 1.2rem;
+}

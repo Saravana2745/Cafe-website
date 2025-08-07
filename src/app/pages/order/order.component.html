@@ -1,0 +1,87 @@
+<body>
+<div class="order-hero">
+  <h1>{{ selectedCategory === null ? 'OUR MENU' : selectedCategory }}</h1>
+  <p>
+    We have a globally recommended chai accompanied with a large food range served in an amazing environment.
+  </p>
+</div>
+
+<div class="order-categories">
+  <h2>Choose a Category</h2>
+  <div class="category-list">
+  <div
+    class="category-card"
+    *ngFor="let cat of categories"
+    [ngClass]="[
+      selectedCategory === cat.name ? 'selected' : '',
+      getCategoryClass(cat.name)
+    ]"
+    (click)="selectCategory(cat.name)"
+  >
+    <span class="category-icon">{{ cat.icon }}</span>
+    <span class="category-name">{{ cat.name }}</span>
+  </div>
+</div>
+
+<div class="food-list" @flyUp *ngIf="selectedCategory !== null">
+  <div class="food-card" *ngFor="let food of filteredFoods">
+    <img class="food-img" [src]="food.image" [alt]="food.name" />
+    <div class="food-name">{{ food.name }}</div>
+    <div class="food-price">₹{{ food.price }}</div>
+    <ng-container *ngIf="orderingFood !== food">
+      <button class="food-order-btn" (click)="orderFood(food)">Order</button>
+    </ng-container>
+    <ng-container *ngIf="orderingFood === food">
+      <div class="order-qty-box">
+  <label>
+    Qty:
+    <button type="button" class="qty-btn" (click)="orderQuantity > 1 ? orderQuantity = orderQuantity - 1 : null">-</button>
+    <input type="number" min="1" [(ngModel)]="orderQuantity" style="width: 50px; margin: 0 5px;" />
+    <button type="button" class="qty-btn" (click)="orderQuantity = orderQuantity + 1">+</button>
+  </label>
+  <button
+  class="food-order-btn"
+  [ngClass]="{'trolley-animate': trolleyAnimating}"
+  (click)="confirmOrder()"
+>
+  <span class="cart-icon" style="margin-right: 0.5em;">🛒</span>
+  Add to Cart
+</button>
+  <button class="food-order-btn cancel" (click)="cancelOrder()">Cancel</button>
+</div>
+    </ng-container>
+  </div>
+</div>
+<div class="info-sections-row" @flyDown>
+  <div class="signature-items-section info-section" [ngClass]="{'visible': signatureVisible}" #signatureSection>
+    <div class="info-content">
+      <h2>Signature Items</h2>
+      <ul>
+        <li>🌟 Classic Cappuccino</li>
+        <li>🌟 Masala Chai</li>
+        <li>🌟 Quinoa Salad</li>
+        <li>🌟 Chocolate Cake</li>
+      </ul>
+    </div>
+    <div class="info-img right">
+      <img src="sg.jpg" alt="Signature Items" />
+    </div>
+  </div>
+
+  <div class="health-benefits-section info-section" [ngClass]="{'visible': healthVisible}" #healthSection>
+    <div class="info-img left">
+      <img src="h.jpg" alt="Health Benefits" />
+    </div>
+    <div class="info-content">
+      <h2>Health Benefits</h2>
+      <ul>
+        <li>☑️ Fresh ingredients for a healthy lifestyle</li>
+        <li>☑️ Balanced meals with nutritious options</li>
+        <li>☑️ Low sugar and low fat alternatives</li>
+        <li>☑️ Herbal teas and antioxidant-rich drinks</li>
+      </ul>
+    </div>
+  </div>
+</div>
+</div>
+</body>

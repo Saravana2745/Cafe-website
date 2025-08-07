@@ -1,0 +1,86 @@
+<body>
+<div class="video-bg-fadein-full" style="margin-top:90px;">
+  <video #bgVideo autoplay muted loop playsinline class="fadein-bg-video-full">
+  <source src="/bg.mp4" type="video/mp4" />
+  Your browser does not support the video tag.
+</video>
+  <div class="fadein-content-full">
+    <h1>Welcome to Café Aroma</h1>
+    <p class="slide-in">Authentic flavors, fresh ingredients, and a warm, earthy ambiance.</p>
+  </div>
+</div>
+
+<div class="amudham-section wide">
+  <div class="amudham-text">
+    <h2>Taste the Happiness, Fresh &amp; Friendly!</h2>
+    <p>
+      Cafe Aroma is a delightful culinary gem that never fails to impress. Tucked away in the bustling streets of Chennai, these cozy cafes offer a warm and inviting ambiance, perfect for catching up with friends or enjoying a quiet meal alone.
+    </p>
+  </div>
+  <div class="amudham-img">
+    <img src="c.webp" alt="Cafe Amudham" />
+  </div>
+</div>
+
+<div class="story-section with-image" [@bounceInOnScroll]="storyInView ? 'inView' : 'outOfView'">
+  <div class="story-img">
+    <img src="s.jpg" alt="Our Story" />
+  </div>
+  <div class="story-text">
+    <h2>Our Story</h2>
+    <h3>Flavors of South India</h3>
+    <p>
+      This outpouring of love and support has encouraged us to open multiple outlets. We are incredibly excited about the response we have received so far and cannot wait to introduce our expanded menu, which highlights forgotten recipes and hidden gems from every nook and corner of Southern India.
+    </p>
+    <a (click)="gotoAbout()" class="read-more-btn">Readmore</a>
+  </div>
+</div>
+
+<div class="services-section" [class.in-view]="servicesInView">
+  <h2>Services We Provide</h2>
+  <div class="services-list">
+    <div class="service-card">
+      <img src="c.jpg" alt="All kinds of Foods" class="service-img" />
+      <div class="service-info">
+        <span class="service-icon">🍽️</span>
+        <h3>All kinds of Foods</h3>
+      </div>
+    </div>
+    <div class="service-card">
+      <img src="s.webp" alt="Seasonal menu items" class="service-img" />
+      <div class="service-info">
+        <span class="service-icon">🌱</span>
+        <h3>Seasonal menu items</h3>
+      </div>
+    </div>
+    <div class="service-card">
+      <img src="f.jpg" alt="Fresh Foods" class="service-img" />
+      <div class="service-info">
+        <span class="service-icon">🥗</span>
+        <h3>Fresh Foods</h3>
+      </div>
+    </div>
+    <div class="service-card">
+      <img src="e.webp" alt="Best Taste" class="service-img" />
+      <div class="service-info">
+        <span class="service-icon">😋</span>
+        <h3>Best Taste</h3>
+      </div>
+    </div>
+    <div class="service-card">
+      <img src="d.jpg" alt="On Time Delivery" class="service-img" />
+      <div class="service-info">
+        <span class="service-icon">⏰</span>
+        <h3>On Time Delivery</h3>
+      </div>
+    </div>
+    <div class="service-card">
+      <img src="o.jpeg" alt="Delivery/pick-up options" class="service-img" />
+      <div class="service-info">
+        <span class="service-icon">🚗</span>
+        <h3>Delivery/pick-up options</h3>
+      </div>
+    </div>
+  </div>
+</div>
+</body>

@@ -1,0 +1,720 @@
+/* Video background section, full width below navbar */
+.video-bg-fadein-full {
+  position: relative;
+  width: 99vw;
+  min-height: 320px;
+  max-width: 100vw;
+  margin: 1rem 0 auto;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+  background: #000;
+  overflow: hidden;
+  animation: fadeIn 2s ease-in;
+}
+
+/* Video fills the section */
+.fadein-bg-video-full {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+  opacity: 0.55;
+  pointer-events: none;
+}
+
+/* Content over video, centered and readable */
+.fadein-content-full {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  padding: 4rem 1.5rem;
+  text-align: center;
+  background: rgba(44, 44, 44, 0.55);
+  border-radius: 14px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+  max-width: 900px;
+  margin: 3rem auto;
+}
+.fadein-content-full h1 {
+  font-size: 2.5rem;
+  opacity: 0;
+  animation: fadeInUp 1.5s 0.5s forwards;
+  word-break: break-word;
+  hyphens: auto;
+}
+.fadein-content-full p {
+  font-size: 1.2rem;
+  opacity: 0;
+  animation: fadeInUp 1.5s 0.5s forwards;
+}
+
+/* Slide-in animation for elements */
+.slide-in {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: slideIn 1.2s 1s forwards;
+}
+
+/* Amudham section, wide box with text and image */
+.amudham-section.wide {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  background: rgba(255,255,255,0.85);
+  border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(107, 79, 39, 0.10);
+  padding: 2.5rem 4vw;
+  margin: 2.5rem auto 0 auto;
+  max-width: 1200px;
+  width: 98vw;
+  will-change: transform;
+  transition: transform 0.4s cubic-bezier(.03,.98,.52,.99);
+  opacity: 0;
+  animation: fadeInSection 1.5s forwards;
+  animation-delay: 1.2s;
+}
+.amudham-text {
+  flex: 1 1 0;
+}
+.amudham-text h2 {
+  color: #6b4f27;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  word-break: break-word;
+  hyphens: auto;
+}
+.amudham-text p {
+  color: #4b2e05;
+  font-size: 1.1rem;
+}
+.amudham-img {
+  flex: 0 0 280px;
+  display: flex;
+  justify-content: flex-end;
+}
+.amudham-img img {
+  width: 260px;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 14px;
+  box-shadow: 0 2px 12px rgba(107, 79, 39, 0.13);
+  max-width: 100%;
+  height: auto;
+}
+
+/* Story section */
+.story-section {
+  background: rgba(255,255,255,0.92);
+  border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(107, 79, 39, 0.10);
+  padding: 2.5rem 2rem;
+  margin: 2.5rem auto 0 auto;
+  max-width: 1200px;
+  width: max-content;
+  text-align: center;
+  opacity: 0;
+  animation: fadeInSection 1.5s forwards;
+  animation-delay: 1.2s;
+}
+.story-section.with-image {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  background: rgba(255,255,255,0.92);
+  border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(107, 79, 39, 0.10);
+  padding: 2.5rem 2rem;
+  margin: 2.5rem auto 0 auto;
+  max-width: 900px;
+  text-align: left;
+  opacity: 0;
+  animation: fadeInSection 1.5s forwards;
+  animation-delay: 1.2s;
+}
+.story-img {
+  flex: 0 0 220px;
+  display: flex;
+  justify-content: flex-start;
+}
+.story-img img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 14px;
+  box-shadow: 0 2px 12px rgba(107, 79, 39, 0.13);
+  max-width: 100%;
+  height: auto;
+}
+.story-text {
+  flex: 1 1 0;
+  padding-left: 1.5rem;
+}
+.story-text h2 {
+  color: #6b4f27;
+  margin-bottom: 0.5rem;
+  font-size: 2rem;
+  word-break: break-word;
+  hyphens: auto;
+}
+.story-text h3 {
+  color: #c19a6b;
+  margin-bottom: 1.2rem;
+  font-size: 1.2rem;
+}
+.story-text p {
+  color: #4b2e05;
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Read more button */
+.read-more-btn {
+  display: inline-block;
+  background: #6b4f27;
+  color: #fff;
+  padding: 0.7rem 1.7rem;
+  border-radius: 22px;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+.read-more-btn:hover {
+  background: #c19a6b;
+  color: #fff;
+}
+
+/* Services section */
+.services-section {
+  background: rgba(255, 255, 255, 0.93);
+  border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(107, 79, 39, 0.10);
+  padding: 2.5rem 2rem;
+  margin: 2.5rem auto 0 auto;
+  max-width: 900px;
+  text-align: center;
+  opacity: 0;
+  animation: fadeInSection 1.5s forwards;
+  animation-delay: 1.2s;
+  transform: translateX(-80px);
+  transition: opacity 0.8s cubic-bezier(.23,1.02,.47,.98), transform 0.8s cubic-bezier(.23,1.02,.47,.98);
+  box-sizing: border-box;
+  width: 100%;
+}
+.services-section.in-view {
+  opacity: 1;
+  transform: translateX(0);
+}
+.services-section h2 {
+  color: #6b4f27;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  letter-spacing: 1px;
+  word-break: break-word;
+  hyphens: auto;
+}
+
+/* Services grid */
+.services-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  justify-items: center;
+  align-items: stretch;
+  margin: 0 auto;
+  padding: 0;
+  max-width: 860px;
+}
+/* ...existing code... */
+.service-card {
+  background: linear-gradient(135deg, #fffdfa 60%, #ffe4b5 100%, #ffe5ec 180deg, #e0f7fa 300deg);
+  border-radius: 14px;
+  box-shadow: 0 2px 8px rgba(114, 19, 0, 0.07);
+  width: 94%;
+  max-width: 260px;
+  min-width: 0;
+  margin: 0;
+  padding: 1.2rem 1rem 1.5rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  will-change: transform;
+  transition: transform 0.4s cubic-bezier(.03,.98,.52,.99), box-shadow 0.2s, background 0.4s;
+  /* Add a subtle animated gradient on hover */
+  background-size: 200% 200%;
+}
+.service-card:hover {
+  transform: translateY(-8px) scale(1.04);
+  box-shadow: 0 8px 24px rgba(242, 50, 108, 0.13);
+  background-position: right bottom;
+  background: linear-gradient(120deg, #ffe4b5 0%, #ffe5ec 50%, #e0f7fa 100%);
+}
+/* ...existing code... */
+.service-img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  border: 2px solid #ffe4b5;
+  max-width: 100%;
+  height: auto;
+}
+.service-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.service-icon {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+.service-card h3 {
+  color: #6b4f27;
+  font-size: 1.1rem;
+  margin: 0;
+  word-break: break-word;
+  hyphens: auto;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(40px);}
+  to { opacity: 1; transform: translateY(0);}
+}
+@keyframes slideIn {
+  from { opacity: 0; transform: translateY(30px);}
+  to { opacity: 1; transform: translateY(0);}
+}
+@keyframes fadeInSection {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Responsive adjustments */
+@media (max-width: 1100px) {
+  .video-bg-fadein-full {
+    max-width: 99vw;
+  }
+  .amudham-section.wide {
+    max-width: 98vw;
+    padding: 2rem 1vw;
+  }
+  .amudham-img img {
+    width: 200px;
+    height: 200px;
+  }
+  .services-section {
+    max-width: 98vw;
+    padding: 2rem 1vw;
+  }
+}
+@media (max-width: 900px) {
+  .video-bg-fadein-full {
+    min-height: 220px;
+    margin: 1rem 0 0 0;
+  }
+  .fadein-content-full {
+    margin: 2rem 1vw;
+    padding: 2rem 1vw;
+    font-size: 1rem;
+  }
+  .fadein-content-full h1 {
+    font-size: 2rem;
+  }
+  .amudham-section.wide {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1.2rem 2vw;
+  }
+  .amudham-img {
+    justify-content: center;
+    margin-top: 1.2rem;
+  }
+  .amudham-img img {
+    width: 160px;
+    height: 160px;
+  }
+  .story-section.with-image {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1.2rem;
+  }
+  .story-img {
+    justify-content: center;
+    margin-bottom: 1.2rem;
+  }
+  .story-img img {
+    width: 140px;
+    height: 140px;
+  }
+  .story-text {
+    padding-left: 0;
+  }
+  .services-list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.2rem;
+  }
+  .service-card {
+    max-width: 350px;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 600px) {
+  .video-bg-fadein-full {
+    min-height: 120px;
+    border-radius: 8px;
+    margin: 0.5rem 0 0 0;
+  }
+  .fadein-content-full {
+    padding: 1.2rem 0.5rem;
+    margin: 1rem 0.2rem;
+    font-size: 0.95rem;
+  }
+  .fadein-content-full h1 {
+    font-size: 1.2rem;
+  }
+  .amudham-section.wide {
+    padding: 0.8rem 1vw;
+    border-radius: 8px;
+  }
+  .amudham-img img {
+    width: 100px;
+    height: 100px;
+    border-radius: 8px;
+  }
+  .story-section.with-image {
+    padding: 0.8rem 0.2rem;
+    border-radius: 8px;
+  }
+  .story-img img {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+  }
+  .services-section {
+    padding: 1rem 0.2rem;
+    border-radius: 8px;
+  }
+  .services-list {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  .service-card {
+    max-width: 98vw;
+    padding: 0.7rem 0.5rem 1rem 0.5rem;
+    border-radius: 8px;
+  }
+  .service-img {
+    width: 48px;
+    height: 48px;
+  }
+  .service-card h3 {
+    font-size: 1rem;
+  }
+  .amudham-img img,
+  .story-img img,
+  .service-img {
+    width: 120px !important;
+    height: 120px !important;
+    max-width: 95vw;
+    border-radius: 8px;
+  }
+}
+@media (max-width: 480px) {
+  .fadein-content-full h1,
+  .amudham-text h2,
+  .story-text h2,
+  .services-section h2 {
+    font-size: 1.1rem;
+  }
+  .fadein-content-full p,
+  .amudham-text p,
+  .story-text p,
+  .service-card h3 {
+    font-size: 0.95rem;
+  }
+}
+@media (max-width: 400px) {
+  .fadein-content-full {
+    padding: 0.7rem 0.2rem;
+    margin: 0.5rem 0.1rem;
+    font-size: 0.9rem;
+  }
+  .amudham-section.wide,
+  .story-section.with-image,
+  .services-section {
+    padding: 0.5rem 0.1rem;
+  }
+  .amudham-img img,
+  .story-img img,
+  .service-img {
+    width: 90px !important;
+    height: 90px !important;
+    max-width: 98vw;
+  }
+}
+
+/* Global body background and prevent horizontal scroll */
+body {
+  background: linear-gradient(135deg, #f3e9dd 0%, #ffe4b5 100%);
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+body, html {
+  overflow-x: hidden;
+}
+/* Add to home.component.css */
+
+
+.read-more-btn {
+  cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" height="32" width="32"><text y="26" font-size="28">🥢</text></svg>') 0 28, auto;
+}
+
+.read-more-btn:active {
+  cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" height="32" width="32"><text y="26" font-size="28">🍫</text></svg>') 0 28, auto;
+}
+/* --- Responsive Styles --- */
+
+/* Large tablets and below */
+@media (max-width: 1100px) {
+  .video-bg-fadein-full {
+    max-width: 99vw;
+  }
+  .amudham-section.wide {
+    max-width: 98vw;
+    padding: 2rem 1vw;
+  }
+  .amudham-img img {
+    width: 200px;
+    height: 200px;
+  }
+  .services-section {
+    max-width: 98vw;
+    padding: 2rem 1vw;
+  }
+}
+
+/* Tablets and below */
+@media (max-width: 900px) {
+  .video-bg-fadein-full {
+    min-height: 220px;
+    margin: 1rem 0 0 0;
+  }
+  .fadein-content-full {
+    margin: 2rem 1vw;
+    padding: 2rem 1vw;
+    font-size: 1rem;
+  }
+  .fadein-content-full h1 {
+    font-size: 2rem;
+  }
+  .amudham-section.wide {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1.2rem 2vw;
+  }
+  .amudham-img {
+    justify-content: center;
+    margin-top: 1.2rem;
+  }
+  .amudham-img img {
+    width: 160px;
+    height: 160px;
+  }
+  .story-section.with-image {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1.2rem;
+  }
+  .story-img {
+    justify-content: center;
+    margin-bottom: 1.2rem;
+  }
+  .story-img img {
+    width: 140px;
+    height: 140px;
+  }
+  .story-text {
+    padding-left: 0;
+  }
+  .services-list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.2rem;
+  }
+  .service-card {
+    max-width: 350px;
+    margin: 0 auto;
+  }
+}
+
+/* Phones and below */
+@media (max-width: 600px) {
+  .video-bg-fadein-full {
+    min-height: 120px;
+    border-radius: 8px;
+    margin: 0.5rem 0 0 0;
+  }
+  .fadein-content-full {
+    padding: 1.2rem 0.5rem;
+    margin: 1rem 0.2rem;
+    font-size: 0.95rem;
+  }
+  .fadein-content-full h1 {
+    font-size: 1.2rem;
+  }
+  .amudham-section.wide {
+    padding: 0.8rem 1vw;
+    border-radius: 8px;
+  }
+  .amudham-img img {
+    width: 100px;
+    height: 100px;
+    border-radius: 8px;
+  }
+  .story-section.with-image {
+    padding: 0.8rem 0.2rem;
+    border-radius: 8px;
+  }
+  .story-img img {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+  }
+  .services-section {
+    padding: 1rem 0.2rem;
+    border-radius: 8px;
+  }
+  .services-list {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  .service-card {
+    max-width: 97vw;
+    padding: 0.7rem 0.5rem 1rem 0.5rem;
+    border-radius: 8px;
+  }
+  .service-img {
+    width: 48px;
+    height: 48px;
+  }
+  .service-card h3 {
+    font-size: 1rem;
+  }
+  .amudham-img img,
+  .story-img img,
+  .service-img {
+    width: 120px !important;
+    height: 120px !important;
+    max-width: 95vw;
+    border-radius: 8px;
+  }
+}
+
+/* Extra small screens */
+@media (max-width: 480px) {
+  .fadein-content-full h1,
+  .amudham-text h2,
+  .story-text h2,
+  .services-section h2 {
+    font-size: 1.1rem;
+  }
+  .fadein-content-full p,
+  .amudham-text p,
+  .story-text p,
+  .service-card h3 {
+    font-size: 0.95rem;
+  }
+}
+
+/* Very small screens */
+@media (max-width: 400px) {
+  .fadein-content-full {
+    padding: 0.7rem 0.2rem;
+    margin: 0.5rem 0.1rem;
+    font-size: 0.9rem;
+  }
+  .amudham-section.wide,
+  .story-section.with-image,
+  .services-section {
+    padding: 0.5rem 0.1rem;
+  }
+  .amudham-img img,
+  .story-img img,
+  .service-img {
+    width: 90px !important;
+    height: 90px !important;
+    max-width: 98vw;
+  }
+}
+/* ...existing code... */
+
+/* Responsive fix for story-section width */
+@media (max-width: 900px) {
+  .story-section,
+  .story-section.with-image {
+    max-width: 98vw;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+  }
+}
+@media (max-width: 600px) {
+  .story-section,
+  .story-section.with-image {
+    max-width: 100vw;
+    width: 100%;
+    padding-left: 0.2rem;
+    padding-right: 0.2rem;
+    margin-left: 0;
+    margin-right: 0;
+    border-radius: 8px;
+  }
+}
+/* Animated gradient background for service cards */
+@keyframes serviceCardGradient {
+  0% {
+    background-position: 0% 50%;
+    background: linear-gradient(120deg, #fffdfa 0%, #ffe4b5 40%, #ffe5ec 70%, #e0f7fa 100%);
+  }
+  50% {
+    background-position: 100% 50%;
+    background: linear-gradient(120deg, #ffe5ec 0%, #e0f7fa 40%, #fffdfa 70%, #ffe4b5 100%);
+  }
+  100% {
+    background-position: 0% 50%;
+    background: linear-gradient(120deg, #fffdfa 0%, #ffe4b5 40%, #ffe5ec 70%, #e0f7fa 100%);
+  }
+}
+
+.service-card {
+  /* ...existing code... */
+  background: linear-gradient(120deg, #fffdfa 0%, #ffe4b5 40%, #ffe5ec 70%, #e0f7fa 100%);
+  background-size: 200% 200%;
+  animation: serviceCardGradient 4s ease-in-out infinite;
+  transition: box-shadow 0.2s, background 0.4s;
+}
+
+/* Optional: make the animation more vivid on hover */
+.service-card:hover {
+  animation-duration: 1.5s;
+  box-shadow: 0 8px 24px rgba(242, 50, 108, 0.13);
+  background-position: right bottom;
+}
