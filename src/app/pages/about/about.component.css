@@ -2,7 +2,7 @@
   width: 100vw;
   max-width: 100%;
   min-height: 500px;
-  background: url('./ab.jpg') center center/cover no-repeat;
+  background: url('/ab.jpg') center center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
