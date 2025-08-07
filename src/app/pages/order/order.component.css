@@ -10,7 +10,6 @@ body {
 .order-hero {
   width: 97vw;
   min-height: 360px;
-  background: url('/o.jpg') center center/cover no-repeat;
   background-attachment: fixed;
   background-position: center center;
   background-size: cover;
